@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_img_top"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/fall"
+
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/tv_colosseum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="20dp"
+            android:text="The Colosseum"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_colosseum_2"
+            />
+
+        <TextView
+            android:id="@+id/tv_colosseum_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="One of the most recognizable sites in the world"
+            android:textColor="#DCB4B0B0"
+            android:textSize="14sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageButton
+        android:id="@+id/btn_photo"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_photo_camera_24"
+        app:layout_constraintLeft_toLeftOf="@id/layout_img_top"
+        app:layout_constraintRight_toLeftOf="@id/btn_group"
+        app:layout_constraintTop_toBottomOf="@id/layout_img_top" />
+
+    <ImageButton
+        android:id="@+id/btn_group"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:src="@drawable/ic_group"
+        app:layout_constraintLeft_toRightOf="@id/btn_photo"
+        app:layout_constraintRight_toLeftOf="@id/btn_google"
+        app:layout_constraintTop_toBottomOf="@id/layout_img_top"
+
+
+        />
+
+    <ImageButton
+        android:id="@+id/btn_google"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:background="@null"
+        android:src="@drawable/ic_action_name"
+        app:layout_constraintLeft_toRightOf="@id/btn_group"
+        app:layout_constraintRight_toRightOf="@id/layout_img_top"
+        app:layout_constraintTop_toBottomOf="@id/layout_img_top"
+
+
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_number"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_group" />
+
+    <TextView
+        android:id="@+id/tv_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="312"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/layout_number"
+        app:layout_constraintLeft_toLeftOf="@id/layout_number"
+        app:layout_constraintRight_toRightOf="@id/layout_number"
+        app:layout_constraintTop_toTopOf="@id/layout_number" />
+
+    <Button
+        android:id="@+id/btn_to_activity_change_number"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:background="@color/btn_red"
+        android:text="Перейти"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@id/layout_number"
+        app:layout_constraintLeft_toLeftOf="@id/layout_number"
+        app:layout_constraintRight_toRightOf="@id/layout_number"
+        app:layout_constraintTop_toBottomOf="@id/tv_number" />
+</androidx.constraintlayout.widget.ConstraintLayout>
